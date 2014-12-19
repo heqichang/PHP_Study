@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <style>
+        .center {
+            width: auto;
+            display: table;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="center well">
+        <form action="register.php" method="post">
+            <div class="h3 text-center">注册用户</div>
+            <div class="row">
+                <div class="col-xs-4">
+                    用户名:
+                </div>
+                <div class="col-xs-8">
+                    <input type="text" name="username" class="form-control" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">
+                    密码:
+                </div>
+                <div class="col-xs-8">
+                    <input type="text" name="password" class="form-control" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2">
+
+                </div>
+                <div class="col-xs-10">
+                    <input type="submit" value="提交" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>
