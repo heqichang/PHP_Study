@@ -1,3 +1,4 @@
+<pre>
 <?php
 /**
  * Created by PhpStorm.
@@ -23,6 +24,38 @@
 //$GLOBALS += 'abc';
 //var_dump($GLOBALS);
 
+//$a = array('one');
+//$a[] = & $a;
+//
+//xdebug_debug_zval('a');
+//unset($a[1]);
+//xdebug_debug_zval('a');
 
+class a {
 
+    public $b;
+
+    function __construct() {
+        echo "a\n";
+        $this->b = 0;
+    }
+
+    function get_a() {
+        echo "$this->b\n";
+    }
+
+    function __clone() {
+        $this->b++;
+    }
+}
+
+$x = new a();
+$y = new a();
+$x = clone $y;
+$x->get_a();
+$y->get_a();
+$y->b = 2;
+$x->get_a();
+$y->get_a();
 ?>
+</pre>
